@@ -10,4 +10,4 @@ SQL: `SELECT color AS my_color FROM 'a/b' WHERE temperature > 50 AND color <> 'r
 
 In this case, the rule would be triggered, but the actions specified by the rule would not be performed\. There would be no outgoing payload\.
 
-You can use functions and operators in the WHERE clause\. However, you cannot reference any aliases created with the AS keyword in the SELECT\. \(The WHERE clause is evaluated first, to determine if SELECT is evaluated\.\) 
+You can use functions and operators in the WHERE clause\. However, you cannot reference the alias my_color in the function \. \(The WHERE clause is evaluated first, then, depending on the result, SELECT is evaluated\.\) 
